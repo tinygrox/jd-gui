@@ -1,4 +1,5 @@
 # JD-GUI
+中文版本在这里[README_zh.md](./README_zh.md)
 
 JD-GUI, a standalone graphical utility that displays Java sources from CLASS files.
 
