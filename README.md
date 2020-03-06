@@ -19,7 +19,8 @@ JD-GUI是一个独立的可视化的实用程序，它能显示
 > cd jd-gui
 > ./gradlew build 
 ```
-生成程序 :**x.y.z**为当前文件版本号
+生成程序 :
+>**x.y.z**为当前文件版本号例如1.6.6
 - _"build/libs/jd-gui-x.y.z.jar"_
 - _"build/libs/jd-gui-x.y.z-min.jar"_
 - _"build/distributions/jd-gui-windows-x.y.z.zip"_
