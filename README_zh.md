@@ -1,4 +1,4 @@
-# JD-GUI
+# JD-GUI 中文
 
 JD-GUI, 一个独立的可视化程序，显示Class文件中的Java源代码.
 
