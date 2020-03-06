@@ -31,7 +31,7 @@ JD-GUI是一个独立的可视化的实用程序，它能显示
 - 双击 _"jd-gui-x.y.z.jar"_
 - 在Windows双击 _"jd-gui.exe"_ 程序
 - 在Mac OSX 双击 _"JD-GUI"_ 程序
-- 执行 _"java -jar jd-gui-x.y.z.jar"_ 或 _"java -classpath jd-gui-x.y.z.jar org.jd.gui.App"_ 命令
+- 在终端执行 `_java -jar jd-gui-x.y.z.jar_` 或 `_java -classpath jd-gui-x.y.z.jar org.jd.gui.App_` 命令
 
 ## 如何使用 JD-GUI ?
 - 使用菜单打开文件 "文件 > 打开文件..."
