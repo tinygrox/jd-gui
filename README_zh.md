@@ -2,7 +2,7 @@
 
 JD-GUI, 一个独立的可视化程序，显示Class文件中的Java源代码.
 
-![](https://raw.githubusercontent.com/java-decompiler/jd-gui/master/src/website/img/jd-gui.png)
+![](src/website/img/jd-gui-zh.png)
 
 - Java Decompiler工程主页: [http://java-decompiler.github.io](http://java-decompiler.github.io)
 - JD-GUI源代码: [https://github.com/java-decompiler/jd-gui](https://github.com/java-decompiler/jd-gui)

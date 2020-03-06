@@ -96,7 +96,7 @@ public class MainView<T extends JComponent & UriGettable> implements UriOpenable
             Action findNextAction = newAction("Next", newImageIcon("/org/jd/gui/images/next_nav.png"), true, findNextActionListener);
             findPanel = Box.createHorizontalBox();
             findPanel.setVisible(false);
-            findPanel.add(new JLabel("Find: "));//
+            findPanel.add(new JLabel("查找: "));//Find
             findComboBox = new JComboBox();
             findComboBox.setEditable(true);
             JComponent editorComponent = (JComponent)findComboBox.getEditor().getEditorComponent();
@@ -140,17 +140,17 @@ public class MainView<T extends JComponent & UriGettable> implements UriOpenable
             toolBar.setFloatable(false);
             toolBar.setRollover(true);
 
-            IconButton findNextButton = new IconButton("Next", newAction(newImageIcon("/org/jd/gui/images/next_nav.png"), true, findNextActionListener));
+            IconButton findNextButton = new IconButton("下一个", newAction(newImageIcon("/org/jd/gui/images/next_nav.png"), true, findNextActionListener));//Next
             toolBar.add(findNextButton);
 
             toolBar.add(Box.createHorizontalStrut(5));
 
-            IconButton findPreviousButton = new IconButton("Previous", newAction(newImageIcon("/org/jd/gui/images/prev_nav.png"), true, findPreviousActionListener));
+            IconButton findPreviousButton = new IconButton("上一个", newAction(newImageIcon("/org/jd/gui/images/prev_nav.png"), true, findPreviousActionListener));//Previous
             toolBar.add(findPreviousButton);
 
             findPanel.add(toolBar);
             findCaseSensitive = new JCheckBox();
-            findCaseSensitive.setAction(newAction("Case sensitive", true, findCaseSensitiveActionListener));
+            findCaseSensitive.setAction(newAction("区分大小写", true, findCaseSensitiveActionListener));//Case sensitive
             findPanel.add(findCaseSensitive);
             findPanel.add(Box.createHorizontalGlue());
 
