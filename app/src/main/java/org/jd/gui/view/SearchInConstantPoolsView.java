@@ -70,7 +70,7 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
         this.api = api;
         // Build GUI
         SwingUtil.invokeLater(() -> {
-            searchInConstantPoolsDialog = new JDialog(mainFrame, "Search", false);
+            searchInConstantPoolsDialog = new JDialog(mainFrame, "查找", false);//Search
 
             JPanel panel = new JPanel();
             panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -81,7 +81,7 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
             Box vbox = Box.createVerticalBox();
 
             Box hbox = Box.createHorizontalBox();
-            hbox.add(new JLabel("Search string (* = any string, ? = any character):"));
+            hbox.add(new JLabel("查找字符串(* = 任意字符串, ? = 任意字符):"));//Search string (* = any string, ? = any character)
             hbox.add(Box.createHorizontalGlue());
             vbox.add(hbox);
 
@@ -129,7 +129,7 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
             vbox.add(hbox);
 
             JPanel subpanel = new JPanel();
-            subpanel.setBorder(BorderFactory.createTitledBorder("Search For"));
+            subpanel.setBorder(BorderFactory.createTitledBorder("查找"));//Search For
             subpanel.setLayout(new BorderLayout());
             hbox.add(subpanel);
 
@@ -143,30 +143,30 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
 
             JPanel subsubpanel = new JPanel();
             subsubpanel.setLayout(new GridLayout(2, 1));
-            subsubpanel.add(searchInConstantPoolsCheckBoxType = new JCheckBox("Type", true));
+            subsubpanel.add(searchInConstantPoolsCheckBoxType = new JCheckBox("类型", true));//Type
             searchInConstantPoolsCheckBoxType.addItemListener(checkBoxListener);
-            subsubpanel.add(searchInConstantPoolsCheckBoxField = new JCheckBox("Field"));
+            subsubpanel.add(searchInConstantPoolsCheckBoxField = new JCheckBox("字段"));//Field
             searchInConstantPoolsCheckBoxField.addItemListener(checkBoxListener);
             subhbox.add(subsubpanel);
 
             subsubpanel = new JPanel();
             subsubpanel.setLayout(new GridLayout(2, 1));
-            subsubpanel.add(searchInConstantPoolsCheckBoxConstructor = new JCheckBox("Constructor"));
+            subsubpanel.add(searchInConstantPoolsCheckBoxConstructor = new JCheckBox("构造方法"));//Constructor
             searchInConstantPoolsCheckBoxConstructor.addItemListener(checkBoxListener);
-            subsubpanel.add(searchInConstantPoolsCheckBoxMethod = new JCheckBox("Method"));
+            subsubpanel.add(searchInConstantPoolsCheckBoxMethod = new JCheckBox("方法"));//Method
             searchInConstantPoolsCheckBoxMethod.addItemListener(checkBoxListener);
             subhbox.add(subsubpanel);
 
             subsubpanel = new JPanel();
             subsubpanel.setLayout(new GridLayout(2, 1));
-            subsubpanel.add(searchInConstantPoolsCheckBoxString = new JCheckBox("String Constant"));
+            subsubpanel.add(searchInConstantPoolsCheckBoxString = new JCheckBox("字符串常量"));//String Constant
             searchInConstantPoolsCheckBoxString.addItemListener(checkBoxListener);
-            subsubpanel.add(searchInConstantPoolsCheckBoxModule = new JCheckBox("Java Module"));
+            subsubpanel.add(searchInConstantPoolsCheckBoxModule = new JCheckBox("Java 模块"));//Java Module
             searchInConstantPoolsCheckBoxModule.addItemListener(checkBoxListener);
             subhbox.add(subsubpanel);
 
             subpanel = new JPanel();
-            subpanel.setBorder(BorderFactory.createTitledBorder("Limit To"));
+            subpanel.setBorder(BorderFactory.createTitledBorder("范围"));//Limit To
             subpanel.setLayout(new BorderLayout());
             hbox.add(subpanel);
 
@@ -175,16 +175,16 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
 
             subsubpanel = new JPanel();
             subsubpanel.setLayout(new GridLayout(2, 1));
-            subsubpanel.add(searchInConstantPoolsCheckBoxDeclarations = new JCheckBox("Declarations", true));
+            subsubpanel.add(searchInConstantPoolsCheckBoxDeclarations = new JCheckBox("声明", true));//Declarations
             searchInConstantPoolsCheckBoxDeclarations.addItemListener(checkBoxListener);
-            subsubpanel.add(searchInConstantPoolsCheckBoxReferences = new JCheckBox("References", true));
+            subsubpanel.add(searchInConstantPoolsCheckBoxReferences = new JCheckBox("引用", true));//References
             searchInConstantPoolsCheckBoxReferences.addItemListener(checkBoxListener);
             subhbox.add(subsubpanel);
 
             vbox.add(Box.createVerticalStrut(10));
 
             hbox = Box.createHorizontalBox();
-            hbox.add(searchInConstantPoolsLabel = new JLabel("Matching types:"));
+            hbox.add(searchInConstantPoolsLabel = new JLabel("匹配类型:"));//Matching types
             hbox.add(Box.createHorizontalGlue());
             vbox.add(hbox);
 
@@ -241,7 +241,7 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
 
             hbox = Box.createHorizontalBox();
             hbox.add(Box.createHorizontalGlue());
-            JButton searchInConstantPoolsOpenButton = new JButton("Open");
+            JButton searchInConstantPoolsOpenButton = new JButton("打开");//Open
             hbox.add(searchInConstantPoolsOpenButton);
             searchInConstantPoolsOpenButton.setEnabled(false);
             Action searchInConstantPoolsOpenActionListener = new AbstractAction() {
@@ -254,7 +254,7 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
             };
             searchInConstantPoolsOpenButton.addActionListener(searchInConstantPoolsOpenActionListener);
             hbox.add(Box.createHorizontalStrut(5));
-            JButton searchInConstantPoolsCancelButton = new JButton("Cancel");
+            JButton searchInConstantPoolsCancelButton = new JButton("取消");//Cancel
             hbox.add(searchInConstantPoolsCancelButton);
             Action searchInConstantPoolsCancelActionListener = new AbstractAction() {
                 @Override public void actionPerformed(ActionEvent actionEvent) { searchInConstantPoolsDialog.setVisible(false); }
@@ -414,13 +414,13 @@ public class SearchInConstantPoolsView<T extends DefaultMutableTreeNode & Contai
             // Update matching item counter
             switch (matchingTypeCount) {
                 case 0:
-                    searchInConstantPoolsLabel.setText("Matching entries:");
+                    searchInConstantPoolsLabel.setText("匹配条目:");//Matching entries
                     break;
                 case 1:
-                    searchInConstantPoolsLabel.setText("1 matching entry:");
+                    searchInConstantPoolsLabel.setText("1 个匹配条目:");//matching entry
                     break;
                 default:
-                    searchInConstantPoolsLabel.setText(matchingTypeCount + " matching entries:");
+                    searchInConstantPoolsLabel.setText(matchingTypeCount + " 个匹配条目:");//matching entries
             }
         });
     }

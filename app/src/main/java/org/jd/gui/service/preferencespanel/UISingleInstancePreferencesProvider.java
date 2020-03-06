@@ -25,14 +25,14 @@ public class UISingleInstancePreferencesProvider extends JPanel implements Prefe
     public UISingleInstancePreferencesProvider() {
         super(new GridLayout(0,1));
 
-        singleInstanceTabsCheckBox = new JCheckBox("Single instance");
+        singleInstanceTabsCheckBox = new JCheckBox("单一实例");//Single instance
 
         add(singleInstanceTabsCheckBox);
     }
 
     // --- PreferencesPanel --- //
-    @Override public String getPreferencesGroupTitle() { return "User Interface"; }
-    @Override public String getPreferencesPanelTitle() { return "Main window"; }
+    @Override public String getPreferencesGroupTitle() { return "用户界面"; }//User Interface
+    @Override public String getPreferencesPanelTitle() { return "主窗口"; }//Main window
     @Override public JComponent getPanel() { return this; }
 
     @Override public void init(Color errorBackgroundColor) {}

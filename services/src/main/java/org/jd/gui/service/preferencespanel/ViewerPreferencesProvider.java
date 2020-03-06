@@ -32,7 +32,7 @@ public class ViewerPreferencesProvider extends JPanel implements PreferencesPane
     public ViewerPreferencesProvider() {
         super(new BorderLayout());
 
-        add(new JLabel("Font size (" + MIN_VALUE + ".." + MAX_VALUE + "): "), BorderLayout.WEST);
+        add(new JLabel("字体大小 (" + MIN_VALUE + ".." + MAX_VALUE + "): "), BorderLayout.WEST);//Font size
 
         fontSizeTextField = new JTextField();
         fontSizeTextField.getDocument().addDocumentListener(this);
@@ -42,8 +42,8 @@ public class ViewerPreferencesProvider extends JPanel implements PreferencesPane
     }
 
     // --- PreferencesPanel --- //
-    @Override public String getPreferencesGroupTitle() { return "Viewer"; }
-    @Override public String getPreferencesPanelTitle() { return "Appearance"; }
+    @Override public String getPreferencesGroupTitle() { return "视图"; }//Viewer
+    @Override public String getPreferencesPanelTitle() { return "外观"; }//Appearance
     @Override public JComponent getPanel() { return this; }
 
     @Override public void init(Color errorBackgroundColor) {

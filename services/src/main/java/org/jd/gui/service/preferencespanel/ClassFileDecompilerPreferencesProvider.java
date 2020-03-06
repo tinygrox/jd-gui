@@ -24,16 +24,16 @@ public class ClassFileDecompilerPreferencesProvider extends JPanel implements Pr
     public ClassFileDecompilerPreferencesProvider() {
         super(new GridLayout(0,1));
 
-        escapeUnicodeCharactersCheckBox = new JCheckBox("Escape unicode characters");
-        realignLineNumbersCheckBox = new JCheckBox("Realign line numbers");
+        escapeUnicodeCharactersCheckBox = new JCheckBox("转义unicode字符");//Escape unicode characters
+        realignLineNumbersCheckBox = new JCheckBox("校正行号");//Realign line numbers
 
         add(escapeUnicodeCharactersCheckBox);
         add(realignLineNumbersCheckBox);
     }
 
     // --- PreferencesPanel --- //
-    @Override public String getPreferencesGroupTitle() { return "Decompiler"; }
-    @Override public String getPreferencesPanelTitle() { return "Class file"; }
+    @Override public String getPreferencesGroupTitle() { return "反编译"; }//Decompiler
+    @Override public String getPreferencesPanelTitle() { return "Class文件"; }//Class file
     @Override public JComponent getPanel() { return this; }
 
     @Override public void init(Color errorBackgroundColor) {}

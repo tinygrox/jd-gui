@@ -28,7 +28,7 @@ public class AboutView {
     public AboutView(JFrame mainFrame) {
         // Build GUI
         SwingUtil.invokeLater(() -> {
-            aboutDialog = new JDialog(mainFrame, "About Java Decompiler", false);
+            aboutDialog = new JDialog(mainFrame, "关于Java反编译", false);//About Java Decompiler
             aboutDialog.setResizable(false);
 
             JPanel panel = new JPanel();
@@ -51,7 +51,7 @@ public class AboutView {
             subpanel.add(subvbox, BorderLayout.EAST);
             Box hbox = Box.createHorizontalBox();
             subvbox.add(hbox);
-            JLabel mainLabel = new JLabel("Java Decompiler");
+            JLabel mainLabel = new JLabel("Java 反编译");//Java Decompiler
             mainLabel.setFont(UIManager.getFont("Label.font").deriveFont(Font.BOLD, 14));
             hbox.add(mainLabel);
             hbox.add(Box.createHorizontalGlue());
@@ -90,14 +90,18 @@ public class AboutView {
             }
 
             subsubpanel.add(new JLabel("JD-GUI"));
-            subsubpanel.add(new JLabel("version " + jdGuiVersion));
+            subsubpanel.add(new JLabel("版本 " + jdGuiVersion));//version
             subsubpanel.add(new JLabel("JD-Core"));
-            subsubpanel.add(new JLabel("version " + jdCoreVersion));
+            subsubpanel.add(new JLabel("版本 " + jdCoreVersion));//version
 
             hbox.add(Box.createHorizontalGlue());
 
             hbox = Box.createHorizontalBox();
             hbox.add(new JLabel("Copyright © 2008, 2019 Emmanuel Dupuy"));
+            hbox.add(Box.createHorizontalGlue());
+            subvbox.add(hbox);
+            hbox = Box.createHorizontalBox();
+            hbox.add(new JLabel("2020-03-06 由Tinygrox汉化,遵循原作者软件协议"));
             hbox.add(Box.createHorizontalGlue());
             subvbox.add(hbox);
 
@@ -106,7 +110,7 @@ public class AboutView {
             hbox = Box.createHorizontalBox();
             panel.add(hbox, BorderLayout.SOUTH);
             hbox.add(Box.createHorizontalGlue());
-            aboutOkButton = new JButton("    Ok    ");
+            aboutOkButton = new JButton("   确定   ");// Ok 
             Action aboutOkActionListener = new AbstractAction() {
                 @Override public void actionPerformed(ActionEvent actionEvent) { aboutDialog.setVisible(false); }
             };
